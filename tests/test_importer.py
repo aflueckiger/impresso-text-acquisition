@@ -1,4 +1,5 @@
 import pkg_resources
+from dask.distributed import Client
 from impresso_commons.path.path_fs import detect_issues
 from text_importer.importer import import_issues
 
@@ -11,6 +12,9 @@ def test_olive_import_issues():
     issues = detect_issues(inp_dir)
     assert issues is not None
     assert len(issues) > 0
+
+    client = Client(processes=False, n_workers=8, threads_per_worker=1)
+    print(client)
 
     result = import_issues(
         issues,

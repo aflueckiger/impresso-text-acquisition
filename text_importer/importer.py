@@ -2,7 +2,7 @@
 Functions and CLI script to convert Olive OCR data into Impresso's format.
 
 Usage:
-    impresso-txt-importer --input-dir=<id> --image-dir=<imgd> --input-format=<if> (--clear | --incremental) [--output-dir==<od> --s3-bucket=<b> --config-file=<cf> --log-file=<f> --temp-dir==<td> --verbose --parallelize]
+    impresso-txt-importer --input-dir=<id> --image-dir=<imgd> --input-format=<if> (--clear | --incremental) [--output-dir==<od> --s3-bucket=<b> --config-file=<cf> --log-file=<f> --temp-dir==<td> --verbose --parallelize --scheduler=<sch>]
     impresso-txt-importer --version
 
 Options:
@@ -16,6 +16,7 @@ Options:
     --verbose           Verbose log messages (good for debugging)
     --clear             Removes the output folder (if already existing)
     --parallelize       Parallelize the import
+    --scheduler=<sch>  Tell dask to use an existing scheduler (otherwise it'll create one)
     --filter=<ft>       Criteria to filter issues before import ("journal=GDL; date=1900/01/01-1950/12/31;")
     --version
 """  # noqa: E501
@@ -25,10 +26,8 @@ import logging
 import os
 import shutil
 
-import dask
-from dask import compute, delayed
-from dask.diagnostics import ProgressBar
-from dask.multiprocessing import get as mp_get
+import dask.bag as db
+from dask.distributed import progress, Client
 from docopt import docopt
 
 from text_importer import __version__
@@ -93,16 +92,13 @@ def import_issues(
     importer_function = olive_import_issue
 
     # prepare the execution of the import function
-    tasks = [
-        delayed(importer_function)(
-            i,
-            img_dir,
-            out_dir=outp_dir,
-            s3_bucket=out_bucket,
-            temp_dir=temp_dir
-        )
-        for i in issues
-    ]
+    bag = db.from_sequence(issues).map(
+        importer_function,
+        img_dir,
+        out_dir=outp_dir,
+        s3_bucket=out_bucket,
+        temp_dir=temp_dir
+    )
 
     print(
         "\nImporting {} newspaper issues...(parallelized={})".format(
@@ -110,11 +106,11 @@ def import_issues(
             parallel_execution
         )
     )
-    with ProgressBar():
-        if parallel_execution:
-            result = compute(*tasks, get=mp_get)
-        else:
-            result = compute(*tasks, get=dask.get)
+
+    future = bag.persist()
+    progress(future)
+    result = list(bag)
+
     print("Done.\n")
     logger.debug(result)
     return result
@@ -134,6 +130,7 @@ def main():
     log_file = args["--log-file"]
     parallel_execution = args["--parallelize"]
     clear_output = args["--clear"]
+    scheduler = args["--scheduler"]
     incremental_output = args["--incremental"]
     log_level = logging.DEBUG if args["--verbose"] else logging.INFO
     print_version = args["--version"]
@@ -160,6 +157,14 @@ def main():
     logger.info("Logger successfully initialised")
 
     logger.debug("CLI arguments received: {}".format(args))
+
+    # start the dask local cluster
+    if scheduler is None:
+        client = Client(processes=False, n_workers=2, threads_per_worker=1)
+    else:
+        client = Client(scheduler)
+
+    logger.info(client)
 
     # clean output directory if existing
     if outp_dir is not None and os.path.exists(outp_dir):
@@ -203,6 +208,10 @@ def main():
         )
         logger.debug(f"Remaining issues: {issues}")
         logger.info(f"{len(issues)} remaining issues")
+
+    if parallel_execution:
+        # TODO: react
+        pass
 
     logger.debug("Following issues will be imported:{}".format(issues))
 

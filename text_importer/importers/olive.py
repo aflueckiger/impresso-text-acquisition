@@ -803,6 +803,7 @@ def olive_import_issue(
             page_dict = recompose_page(page_no, info_from_toc, elements)
             page = PageSchema(**page_dict)
             pages[page_no] = page
+            # pages[page_no] = page_dict
 
         contents = recompose_ToC(toc_data, articles)
         pages_ids = [
@@ -815,6 +816,7 @@ def olive_import_issue(
             "i": contents,
             "pp": pages_ids
         }
+
         try:
             image_info = get_image_info(issue_dir, image_dir)
         except FileNotFoundError:
