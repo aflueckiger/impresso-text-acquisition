@@ -7,20 +7,18 @@ name = "pypi"
 "bs4" = "*"
 docopt = "*"
 pandas = "*"
-dask = {extras = ["complete"]}
 lxml = "*"
 python-jsonschema-objects = "*"
 jsonlines = "*"
 boto = "*"
 "boto3" = "*"
 impresso-commons = {git = "https://github.com/impresso/impresso-pycommons.git", editable = true}
+dask = {extras = ["complete"]}
 
 [dev-packages]
-pytest = "*"
 ipython = "*"
-ipdb = "*"
+pytest = "*"
 smart-open = "*"
-jupyter = "*"
 "flake8" = "*"
 isort = "*"
 tox = "*"
