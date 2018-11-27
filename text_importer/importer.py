@@ -26,16 +26,16 @@ import logging
 import os
 import shutil
 
+import dask
 import dask.bag as db
-from dask.distributed import progress, Client
+from dask.distributed import Client, progress
 from docopt import docopt
+from impresso_commons.path.path_fs import (KNOWN_JOURNALS,
+                                           detect_canonical_issues,
+                                           detect_issues, select_issues)
 
 from text_importer import __version__
 from text_importer.importers.olive import olive_import_issue
-
-from impresso_commons.path.path_fs import detect_issues, select_issues
-from impresso_commons.path.path_fs import detect_canonical_issues
-from impresso_commons.path.path_fs import KNOWN_JOURNALS
 
 __author__ = "Matteo Romanello"
 __email__ = "matteo.romanello@epfl.ch"
@@ -107,9 +107,9 @@ def import_issues(
         )
     )
 
-    future = bag.persist()
-    progress(future)
-    result = list(bag)
+    # future = bag.persist()
+    # progress(future)
+    result = list(bag.compute())
 
     print("Done.\n")
     logger.debug(result)
@@ -157,6 +157,11 @@ def main():
     logger.info("Logger successfully initialised")
 
     logger.debug("CLI arguments received: {}".format(args))
+
+    if parallel_execution:
+        dask.config.set(scheduler='distributed')
+    else:
+        dask.config.set(scheduler='synchronous')
 
     # start the dask local cluster
     if scheduler is None:
@@ -208,10 +213,6 @@ def main():
         )
         logger.debug(f"Remaining issues: {issues}")
         logger.info(f"{len(issues)} remaining issues")
-
-    if parallel_execution:
-        # TODO: react
-        pass
 
     logger.debug("Following issues will be imported:{}".format(issues))
 

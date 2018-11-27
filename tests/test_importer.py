@@ -1,5 +1,4 @@
 import pkg_resources
-from dask.distributed import Client
 from impresso_commons.path.path_fs import detect_issues
 from text_importer.importer import import_issues
 

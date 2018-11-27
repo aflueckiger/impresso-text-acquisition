@@ -3,6 +3,7 @@
 *pyc
 text_importer/data/tmp/
 text_importer/data/temp/
+text_importer/data/mini_data/
 .pytest_cache
 *.egg-info
 .ipynb_checkpoints/
@@ -10,3 +11,4 @@ dask-worker-space
 *.log
 text_importer/data/cahier-de-charges-mets-alto2016.zip
 *.pkl
+.python-version

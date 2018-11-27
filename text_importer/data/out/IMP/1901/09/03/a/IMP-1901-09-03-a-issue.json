@@ -3,7 +3,7 @@
    "i": [
       {
          "l": {
-            "id": "Ar00100",
+            "id": "Ad00110",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -12,13 +12,13 @@
             "pp": [
                1
             ],
-            "t": "La Chaux-de-Fonds",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
          "l": {
-            "id": "Ar00200",
+            "id": "Ad00203",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -27,8 +27,8 @@
             "pp": [
                2
             ],
-            "t": "BANQUE FEDERALE (Soci\u00e9t\u00e9 anonyme) LA CHA...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
@@ -48,7 +48,22 @@
       },
       {
          "l": {
-            "id": "Ar00500",
+            "id": "Ad00407",
+            "source": "113-IMP-1901-09-03-0001.pdf"
+         },
+         "m": {
+            "id": "IMP-1901-09-03-a-i0033",
+            "l": "fr",
+            "pp": [
+               4
+            ],
+            "t": "",
+            "tp": "ad"
+         }
+      },
+      {
+         "l": {
+            "id": "Ad00504",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -57,13 +72,13 @@
             "pp": [
                5
             ],
-            "t": "Ttamnicalla parlant Fran\u00e7ais, Allemand U...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
          "l": {
-            "id": "Ar00600",
+            "id": "Ad00604",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -72,8 +87,8 @@
             "pp": [
                6
             ],
-            "t": "K nnpnnf\u00ef On d\u00e9sire placer un jeune n.[/...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
@@ -134,32 +149,22 @@
       },
       {
          "l": {
-            "id": [
-               "Ar00101",
-               "Ar00102",
-               "Ar00103"
-            ],
-            "source": [
-               "113-IMP-1901-09-03-0001.pdf",
-               "113-IMP-1901-09-03-0001.pdf",
-               "113-IMP-1901-09-03-0001.pdf"
-            ]
+            "id": "Ar00100",
+            "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
             "id": "IMP-1901-09-03-a-i0002",
             "l": "fr",
             "pp": [
-               1,
-               1,
                1
             ],
-            "t": "Une histoire romanesque",
+            "t": "La Chaux-de-Fonds",
             "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ar00201",
+            "id": "Ad00206",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -168,8 +173,8 @@
             "pp": [
                2
             ],
-            "t": "BATAILLON de Sapeurs ^ Pompiers Du 2 au ...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
@@ -189,29 +194,22 @@
       },
       {
          "l": {
-            "id": [
-               "Ar00401",
-               "Ar00402"
-            ],
-            "source": [
-               "113-IMP-1901-09-03-0001.pdf",
-               "113-IMP-1901-09-03-0001.pdf"
-            ]
+            "id": "Ad00410",
+            "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
             "id": "IMP-1901-09-03-a-i0034",
             "l": "fr",
             "pp": [
-               4,
                4
             ],
-            "t": "Chronique du \u00abJura bernois",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
          "l": {
-            "id": "Ar00501",
+            "id": "Ad00505",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -220,13 +218,13 @@
             "pp": [
                5
             ],
-            "t": "r-irlnano Une ba\u00bbne palllonneuse ea taUf...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
          "l": {
-            "id": "Ar00601",
+            "id": "Ad00606",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -235,13 +233,38 @@
             "pp": [
                6
             ],
-            "t": "Pa\u00een\u00cePP ^ n demande suite un ou-UtUUlCl....",
+            "t": "",
+            "tp": "ad"
+         }
+      },
+      {
+         "l": {
+            "id": [
+               "Ar00101",
+               "Ar00102",
+               "Ar00103"
+            ],
+            "source": [
+               "113-IMP-1901-09-03-0001.pdf",
+               "113-IMP-1901-09-03-0001.pdf",
+               "113-IMP-1901-09-03-0001.pdf"
+            ]
+         },
+         "m": {
+            "id": "IMP-1901-09-03-a-i0003",
+            "l": "fr",
+            "pp": [
+               1,
+               1,
+               1
+            ],
+            "t": "Une histoire romanesque",
             "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ar00202",
+            "id": "Ad00207",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -250,8 +273,8 @@
             "pp": [
                2
             ],
-            "t": "Grande Brasserie GLOBE 45, rue de la Ser...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
@@ -278,7 +301,22 @@
       },
       {
          "l": {
-            "id": "Ar00502",
+            "id": "Ad00416",
+            "source": "113-IMP-1901-09-03-0001.pdf"
+         },
+         "m": {
+            "id": "IMP-1901-09-03-a-i0035",
+            "l": "fr",
+            "pp": [
+               4
+            ],
+            "t": "",
+            "tp": "ad"
+         }
+      },
+      {
+         "l": {
+            "id": "Ad00506",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -287,13 +325,13 @@
             "pp": [
                5
             ],
-            "t": "BRASER\u0152 DD SQUARE ce toir Lundi dis 8 he...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
          "l": {
-            "id": "Ar00602",
+            "id": "Ad00607",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -302,13 +340,13 @@
             "pp": [
                6
             ],
-            "t": "fVi-imhPP ** louer de suite une cham-UUa...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
          "l": {
-            "id": "Ad00203",
+            "id": "Ad00208",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -323,22 +361,7 @@
       },
       {
          "l": {
-            "id": "Ar00403",
-            "source": "113-IMP-1901-09-03-0001.pdf"
-         },
-         "m": {
-            "id": "IMP-1901-09-03-a-i0036",
-            "l": "fr",
-            "pp": [
-               4
-            ],
-            "t": "Chronique locale",
-            "tp": "article"
-         }
-      },
-      {
-         "l": {
-            "id": "Ar00503",
+            "id": "Ad00508",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -347,13 +370,13 @@
             "pp": [
                5
             ],
-            "t": "BRASSBRIB METROPOLE CE SOIR et jours sui...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
          "l": {
-            "id": "Ar00603",
+            "id": "Ad00608",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -362,35 +385,13 @@
             "pp": [
                6
             ],
-            "t": "\u00c2 Vpnrlrp nne bonne pouliche de 11 \u2022cuui...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
          "l": {
-            "id": [
-               "Ar00104",
-               "Ar00105"
-            ],
-            "source": [
-               "113-IMP-1901-09-03-0001.pdf",
-               "113-IMP-1901-09-03-0001.pdf"
-            ]
-         },
-         "m": {
-            "id": "IMP-1901-09-03-a-i0005",
-            "l": "fr",
-            "pp": [
-               1,
-               1
-            ],
-            "t": "La journ\u00e9e du mandarin &",
-            "tp": "article"
-         }
-      },
-      {
-         "l": {
-            "id": "Ar00204",
+            "id": "Ad00209",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -399,8 +400,8 @@
             "pp": [
                2
             ],
-            "t": "Maison \u00e0 vendre A vendre nne belle maiso...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
@@ -420,22 +421,29 @@
       },
       {
          "l": {
-            "id": "Ar00404",
-            "source": "113-IMP-1901-09-03-0001.pdf"
+            "id": [
+               "Ar00401",
+               "Ar00402"
+            ],
+            "source": [
+               "113-IMP-1901-09-03-0001.pdf",
+               "113-IMP-1901-09-03-0001.pdf"
+            ]
          },
          "m": {
             "id": "IMP-1901-09-03-a-i0037",
             "l": "fr",
             "pp": [
+               4,
                4
             ],
-            "t": "Dernier Courrier et D\u00e9p\u00eaches",
+            "t": "Chronique du \u00abJura bernois",
             "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ad00504",
+            "id": "Ar00500",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -444,13 +452,13 @@
             "pp": [
                5
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "Ttamnicalla parlant Fran\u00e7ais, Allemand U...",
+            "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ad00604",
+            "id": "Ar00600",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -459,13 +467,35 @@
             "pp": [
                6
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "K nnpnnf\u00ef On d\u00e9sire placer un jeune n.[/...",
+            "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ar00205",
+            "id": [
+               "Ar00104",
+               "Ar00105"
+            ],
+            "source": [
+               "113-IMP-1901-09-03-0001.pdf",
+               "113-IMP-1901-09-03-0001.pdf"
+            ]
+         },
+         "m": {
+            "id": "IMP-1901-09-03-a-i0006",
+            "l": "fr",
+            "pp": [
+               1,
+               1
+            ],
+            "t": "La journ\u00e9e du mandarin &",
+            "tp": "article"
+         }
+      },
+      {
+         "l": {
+            "id": "Ad00210",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -474,8 +504,8 @@
             "pp": [
                2
             ],
-            "t": "Avis Important Un monsieur sur place d\u00e9s...",
-            "tp": "article"
+            "t": "",
+            "tp": "ad"
          }
       },
       {
@@ -502,22 +532,7 @@
       },
       {
          "l": {
-            "id": "Ar00405",
-            "source": "113-IMP-1901-09-03-0001.pdf"
-         },
-         "m": {
-            "id": "IMP-1901-09-03-a-i0038",
-            "l": "fr",
-            "pp": [
-               4
-            ],
-            "t": "WWfkW Les Annonces sont ins\u00e9r\u00e9es avec le...",
-            "tp": "article"
-         }
-      },
-      {
-         "l": {
-            "id": "Ad00505",
+            "id": "Ar00501",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -526,13 +541,13 @@
             "pp": [
                5
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "r-irlnano Une ba\u00bbne palllonneuse ea taUf...",
+            "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ar00605",
+            "id": "Ar00601",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -541,28 +556,13 @@
             "pp": [
                6
             ],
-            "t": "M. le W PERROCHET -A-\"k>se:n.-t H832-3 p...",
+            "t": "Pa\u00een\u00cePP ^ n demande suite un ou-UtUUlCl....",
             "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ar00106",
-            "source": "113-IMP-1901-09-03-0001.pdf"
-         },
-         "m": {
-            "id": "IMP-1901-09-03-a-i0007",
-            "l": "fr",
-            "pp": [
-               1
-            ],
-            "t": "Nouvelles \u00e9trang\u00e8res",
-            "tp": "article"
-         }
-      },
-      {
-         "l": {
-            "id": "Ad00206",
+            "id": "Ad00211",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -577,7 +577,7 @@
       },
       {
          "l": {
-            "id": "Ar00406",
+            "id": "Ar00403",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -586,13 +586,13 @@
             "pp": [
                4
             ],
-            "t": "Agence t\u00e9l\u00e9graphlqoe \u00abnlsse",
+            "t": "Chronique locale",
             "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ad00506",
+            "id": "Ar00502",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -601,13 +601,13 @@
             "pp": [
                5
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "BRASER\u0152 DD SQUARE ce toir Lundi dis 8 he...",
+            "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ad00606",
+            "id": "Ar00602",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -616,13 +616,13 @@
             "pp": [
                6
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "fVi-imhPP ** louer de suite une cham-UUa...",
+            "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ar00107",
+            "id": "Ar00106",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -631,13 +631,13 @@
             "pp": [
                1
             ],
-            "t": "n\u00bb m kvmm 10 tint, ti l,$n\u00bb Pour les ann...",
+            "t": "Nouvelles \u00e9trang\u00e8res",
             "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ad00207",
+            "id": "Ar00200",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -646,8 +646,8 @@
             "pp": [
                2
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "BANQUE FEDERALE (Soci\u00e9t\u00e9 anonyme) LA CHA...",
+            "tp": "article"
          }
       },
       {
@@ -674,7 +674,7 @@
       },
       {
          "l": {
-            "id": "Ad00407",
+            "id": "Ar00404",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -683,8 +683,83 @@
             "pp": [
                4
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "Dernier Courrier et D\u00e9p\u00eaches",
+            "tp": "article"
+         }
+      },
+      {
+         "l": {
+            "id": "Ar00503",
+            "source": "113-IMP-1901-09-03-0001.pdf"
+         },
+         "m": {
+            "id": "IMP-1901-09-03-a-i0057",
+            "l": "fr",
+            "pp": [
+               5
+            ],
+            "t": "BRASSBRIB METROPOLE CE SOIR et jours sui...",
+            "tp": "article"
+         }
+      },
+      {
+         "l": {
+            "id": "Ar00603",
+            "source": "113-IMP-1901-09-03-0001.pdf"
+         },
+         "m": {
+            "id": "IMP-1901-09-03-a-i0067",
+            "l": "fr",
+            "pp": [
+               6
+            ],
+            "t": "\u00c2 Vpnrlrp nne bonne pouliche de 11 \u2022cuui...",
+            "tp": "article"
+         }
+      },
+      {
+         "l": {
+            "id": "Ar00107",
+            "source": "113-IMP-1901-09-03-0001.pdf"
+         },
+         "m": {
+            "id": "IMP-1901-09-03-a-i0009",
+            "l": "fr",
+            "pp": [
+               1
+            ],
+            "t": "n\u00bb m kvmm 10 tint, ti l,$n\u00bb Pour les ann...",
+            "tp": "article"
+         }
+      },
+      {
+         "l": {
+            "id": "Ar00201",
+            "source": "113-IMP-1901-09-03-0001.pdf"
+         },
+         "m": {
+            "id": "IMP-1901-09-03-a-i0020",
+            "l": "fr",
+            "pp": [
+               2
+            ],
+            "t": "BATAILLON de Sapeurs ^ Pompiers Du 2 au ...",
+            "tp": "article"
+         }
+      },
+      {
+         "l": {
+            "id": "Ar00405",
+            "source": "113-IMP-1901-09-03-0001.pdf"
+         },
+         "m": {
+            "id": "IMP-1901-09-03-a-i0041",
+            "l": "fr",
+            "pp": [
+               4
+            ],
+            "t": "WWfkW Les Annonces sont ins\u00e9r\u00e9es avec le...",
+            "tp": "article"
          }
       },
       {
@@ -693,7 +768,7 @@
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
-            "id": "IMP-1901-09-03-a-i0057",
+            "id": "IMP-1901-09-03-a-i0058",
             "l": "fr",
             "pp": [
                5
@@ -704,17 +779,17 @@
       },
       {
          "l": {
-            "id": "Ad00607",
+            "id": "Ar00605",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
-            "id": "IMP-1901-09-03-a-i0067",
+            "id": "IMP-1901-09-03-a-i0068",
             "l": "fr",
             "pp": [
                6
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "M. le W PERROCHET -A-\"k>se:n.-t H832-3 p...",
+            "tp": "article"
          }
       },
       {
@@ -723,7 +798,7 @@
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
-            "id": "IMP-1901-09-03-a-i0009",
+            "id": "IMP-1901-09-03-a-i0010",
             "l": "fr",
             "pp": [
                1
@@ -734,82 +809,7 @@
       },
       {
          "l": {
-            "id": "Ad00208",
-            "source": "113-IMP-1901-09-03-0001.pdf"
-         },
-         "m": {
-            "id": "IMP-1901-09-03-a-i0020",
-            "l": "fr",
-            "pp": [
-               2
-            ],
-            "t": "",
-            "tp": "ad"
-         }
-      },
-      {
-         "l": {
-            "id": "Ar00408",
-            "source": "113-IMP-1901-09-03-0001.pdf"
-         },
-         "m": {
-            "id": "IMP-1901-09-03-a-i0041",
-            "l": "fr",
-            "pp": [
-               4
-            ],
-            "t": "Prime de I'IMPARTIAL",
-            "tp": "article"
-         }
-      },
-      {
-         "l": {
-            "id": "Ad00508",
-            "source": "113-IMP-1901-09-03-0001.pdf"
-         },
-         "m": {
-            "id": "IMP-1901-09-03-a-i0058",
-            "l": "fr",
-            "pp": [
-               5
-            ],
-            "t": "",
-            "tp": "ad"
-         }
-      },
-      {
-         "l": {
-            "id": "Ad00608",
-            "source": "113-IMP-1901-09-03-0001.pdf"
-         },
-         "m": {
-            "id": "IMP-1901-09-03-a-i0068",
-            "l": "fr",
-            "pp": [
-               6
-            ],
-            "t": "",
-            "tp": "ad"
-         }
-      },
-      {
-         "l": {
-            "id": "Ar00109",
-            "source": "113-IMP-1901-09-03-0001.pdf"
-         },
-         "m": {
-            "id": "IMP-1901-09-03-a-i0010",
-            "l": "fr",
-            "pp": [
-               1
-            ],
-            "t": "ABONNEMENTS ET ANNONCES sont re\u00e7us \u00e0 L'I...",
-            "tp": "article"
-         }
-      },
-      {
-         "l": {
-            "id": "Ad00209",
+            "id": "Ar00202",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -818,13 +818,13 @@
             "pp": [
                2
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "Grande Brasserie GLOBE 45, rue de la Ser...",
+            "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ar00409",
+            "id": "Ar00406",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -833,7 +833,7 @@
             "pp": [
                4
             ],
-            "t": "LA HERNIE",
+            "t": "Agence t\u00e9l\u00e9graphlqoe \u00abnlsse",
             "tp": "article"
          }
       },
@@ -854,7 +854,7 @@
       },
       {
          "l": {
-            "id": "Ad00110",
+            "id": "Ar00109",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -863,13 +863,13 @@
             "pp": [
                1
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "ABONNEMENTS ET ANNONCES sont re\u00e7us \u00e0 L'I...",
+            "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ad00210",
+            "id": "Ar00204",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -878,13 +878,13 @@
             "pp": [
                2
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "Maison \u00e0 vendre A vendre nne belle maiso...",
+            "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ad00410",
+            "id": "Ar00408",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -893,13 +893,13 @@
             "pp": [
                4
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "Prime de I'IMPARTIAL",
+            "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ad00211",
+            "id": "Ar00205",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -908,13 +908,13 @@
             "pp": [
                2
             ],
-            "t": "",
-            "tp": "ad"
+            "t": "Avis Important Un monsieur sur place d\u00e9s...",
+            "tp": "article"
          }
       },
       {
          "l": {
-            "id": "Ar00411",
+            "id": "Ar00409",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
@@ -923,7 +923,7 @@
             "pp": [
                4
             ],
-            "t": "Imprimerie A. CQyBVOiSIKK, Chaux-de-Fond...",
+            "t": "LA HERNIE",
             "tp": "article"
          }
       },
@@ -944,11 +944,26 @@
       },
       {
          "l": {
-            "id": "Ar00412",
+            "id": "Ar00411",
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
             "id": "IMP-1901-09-03-a-i0045",
+            "l": "fr",
+            "pp": [
+               4
+            ],
+            "t": "Imprimerie A. CQyBVOiSIKK, Chaux-de-Fond...",
+            "tp": "article"
+         }
+      },
+      {
+         "l": {
+            "id": "Ar00412",
+            "source": "113-IMP-1901-09-03-0001.pdf"
+         },
+         "m": {
+            "id": "IMP-1901-09-03-a-i0046",
             "l": "fr",
             "pp": [
                4
@@ -963,7 +978,7 @@
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
-            "id": "IMP-1901-09-03-a-i0046",
+            "id": "IMP-1901-09-03-a-i0047",
             "l": "fr",
             "pp": [
                4
@@ -978,7 +993,7 @@
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
-            "id": "IMP-1901-09-03-a-i0047",
+            "id": "IMP-1901-09-03-a-i0048",
             "l": "fr",
             "pp": [
                4
@@ -993,28 +1008,13 @@
             "source": "113-IMP-1901-09-03-0001.pdf"
          },
          "m": {
-            "id": "IMP-1901-09-03-a-i0048",
+            "id": "IMP-1901-09-03-a-i0049",
             "l": "fr",
             "pp": [
                4
             ],
             "t": "Eviter les contrefa\u00e7ons I L'H\u00e9nialosr\u00e8ne...",
             "tp": "article"
-         }
-      },
-      {
-         "l": {
-            "id": "Ad00416",
-            "source": "113-IMP-1901-09-03-0001.pdf"
-         },
-         "m": {
-            "id": "IMP-1901-09-03-a-i0049",
-            "l": "fr",
-            "pp": [
-               4
-            ],
-            "t": "",
-            "tp": "ad"
          }
       }
    ],
