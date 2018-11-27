@@ -34,7 +34,18 @@ def olive_toc_parser(toc_path, issue_dir, encoding="windows-1252"):
     for page in BeautifulSoup(text, 'lxml').find_all('page'):
         page_data = {}
 
-        for n, entity in enumerate(page.find_all("entity")):
+        # IDs of content items are assigned in the next `for` loop.
+        # In order to make these IDs deterministic (two runs of same script
+        # with same input data should lead to the very same content item IDs)
+        # we sort the Olive <entity> elements by @id. We could have sorted by
+        # @INDEX_IN_DOC but in some cases this attribute is omitted. @id seems
+        # the most reliable attribute for such a sorting.
+        sorted_entities = sorted(
+            page.find_all("entity"),
+            key=lambda e: e['id'].lower()
+        )
+
+        for n, entity in enumerate(sorted_entities):
 
             global_counter += 1
             item_legacy_id = entity.get("id")
