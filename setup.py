@@ -33,10 +33,10 @@ setup(
     install_requires=[
         'bs4',
         'docopt',
-        'ipdb',  # TODO: remove from production
         'impresso_commons',
         'pandas',
         'dask[complete]',
+        'bokeh',
         'lxml',
         'boto',
         'python-jsonschema-objects',

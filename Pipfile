@@ -14,6 +14,7 @@ boto = "*"
 "boto3" = "*"
 impresso-commons = {git = "https://github.com/impresso/impresso-pycommons.git", editable = true}
 dask = {extras = ["complete"]}
+bokeh = "*"
 
 [dev-packages]
 ipython = "*"
