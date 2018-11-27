@@ -2,30 +2,30 @@
 CLI script to upload impresso canonical data to an S3 drive.
 
 Usage:
-    impresso-txt-uploader --input-dir=<id> --log-file=<f> --s3-bucket=<b> [--overwrite]
+    impresso-txt-uploader --input-dir=<id> --log-file=<f> --s3-bucket=<b> [--overwrite --scheduler=<sch>]
 
 Options:
     --input-dir=<id>    Base directory containing one sub-directory for each journal
     --s3-bucket=<b>     If provided, writes output to an S3 drive, in the specified bucket
     --log-file=<f>      Log file; when missing print log to stdout
     --overwrite         Overwrite files on S3 if already present
+    --scheduler=<sch>  Tell dask to use an existing scheduler (otherwise it'll create one)
 """  # noqa: E501
 
+import getpass
 import logging
 import os
-import ipdb as pdb
 import pickle
-import getpass
 
+import dask.bag as db
+from boto.s3.connection import Key
+from dask.distributed import Client, progress
 from docopt import docopt
 
-from boto.s3.connection import Key
-from dask import compute, delayed
-from dask.diagnostics import ProgressBar
-from dask.multiprocessing import get as mp_get
 import text_importer
-from impresso_commons.path.path_fs import (KNOWN_JOURNALS, detect_canonical_issues)
-from impresso_commons.utils.s3 import get_s3_connection, get_s3_versions
+from impresso_commons.path.path_fs import (KNOWN_JOURNALS,
+                                           detect_canonical_issues)
+from impresso_commons.utils.s3 import (get_bucket, get_s3_versions)
 
 logger = logging.getLogger(__name__)
 
@@ -74,8 +74,31 @@ def s3_upload_issue(local_issue, input_dir, output_bucket, overwrite=False):
             k.close()
         return (local_issue, True)
     except Exception as e:
-        logger.error(f'Failed uploading {local_issue} with error = {e}')
+        print(f'Failed uploading {local_issue} with error = {e}')
         return (local_issue, False)
+
+
+def s3_upload_issues(issues, input_dir, output_bucket, overwrite=False):
+    """
+    Upload a set of canonical newspaper issues to an S3 bucket.
+
+    :param issues: the list of issues to upload
+    :type issues: list of `IssueDir` instances
+    :param output_bucket: the target bucket
+    :type output_bucket: `boto.s3.connection.Bucket`
+    :return: a list of tuples `t` where `t[0]` contains the issue,
+        and `t[1]` is a boolean indicating whether the upload was
+        successful or not.
+    """
+    issue_bag = db.from_sequence(issues).map(
+        s3_upload_issue,
+        input_dir=input_dir,
+        output_bucket=output_bucket,
+        overwrite=overwrite
+    )
+    future = issue_bag.persist()
+    progress(future)
+    return future.compute()
 
 
 def main():
@@ -83,40 +106,43 @@ def main():
     input_dir = args["--input-dir"]
     bucket_name = args["--s3-bucket"]
     log_file = args["--log-file"]
+    scheduler = args["--scheduler"]
     overwrite = False if args["--overwrite"] is None else args["--overwrite"]
 
     # fetch the s3 bucket
-    conn = get_s3_connection()
-    bucket = [
-        bucket
-        for bucket in conn.get_all_buckets()
-        if bucket.name == bucket_name
-    ][0]
+    bucket = get_bucket(bucket_name)
 
     # configure logger
     logger.setLevel(logging.INFO)
     handler = logging.FileHandler(filename=log_file, mode='w')
     logger.addHandler(handler)
 
+    # start the dask local cluster
+    if scheduler is None:
+        client = Client(processes=False, n_workers=2, threads_per_worker=1)
+    else:
+        client = Client(scheduler)
+
+    logger.info(client)
+
     # gather issues to upload
-    local_issues = detect_canonical_issues(input_dir,
-        KNOWN_JOURNALS
+    local_issues = detect_canonical_issues(input_dir, KNOWN_JOURNALS)
+    print(f"Uploading {len(local_issues)} issues to S3 ({bucket_name})")
+    result = s3_upload_issues(
+        local_issues,
+        input_dir,
+        bucket,
+        overwrite=overwrite
     )
-    print(f"Starting import of {len(local_issues)} issues")
 
-    tasks = [
-        delayed(s3_upload_issue)(l, input_dir, bucket, overwrite=overwrite)
-        for l in local_issues
-    ]
-
-    with ProgressBar():
-        result = compute(*tasks, get=mp_get)
-
+    # filter files whose upload has failed
     errors = [
         issue
         for issue, success in result
         if not success
     ]
+
+    print(f"\nUploaded {len(result) - len(errors)}/{len(result)} files")
 
     try:
         assert len(errors) == 0
