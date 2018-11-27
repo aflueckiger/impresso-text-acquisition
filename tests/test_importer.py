@@ -13,9 +13,6 @@ def test_olive_import_issues():
     assert issues is not None
     assert len(issues) > 0
 
-    client = Client(processes=False, n_workers=8, threads_per_worker=1)
-    print(client)
-
     result = import_issues(
         issues,
         "/Volumes/cdh_dhlab_2_arch/project_impresso/images/",
