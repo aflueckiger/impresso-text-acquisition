@@ -18,6 +18,7 @@ Available importers
    importers/mets-alto
    importers/lux
    importers/rero
+   importers/swa
 
 Command-line interface
 ----------------------
