@@ -8,6 +8,7 @@ Available importers
 - :py:mod:`oliveimporter.py`: Olive XML OCR of `RERO <https://www.rero.ch/>`_
 - :py:mod:`reroimporter.py`: Mets/ALTO flavor of `RERO <https://www.rero.ch/>`_
 - :py:mod:`luximporter.py`: Mets/ALTO flavor of the Bibliotheque National du Luxembourg
+- :py:mod:`swaimporter.py`: ALTO flavor of the Basel University Library.
 
 
 .. toctree::
@@ -18,6 +19,7 @@ Available importers
    importers/mets-alto
    importers/lux
    importers/rero
+   importers/swa
 
 Command-line interface
 ----------------------
